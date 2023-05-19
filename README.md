@@ -116,3 +116,36 @@ Esse código realiza um loop para diferentes valores de "k" na lista k_list e it
 Para a realização do cálculo da decomposição matricial, com o algoritmo SVD, foi utilizado a função ``svd`` da biblioteca ``scipy.linalg`` e, para o cálculo da diagonal da matriz Σ, foi utilizado a função ``diag`` da biblioteca ``scipy.linalg``.
 
 ## Resultados
+Após a execução do código, obtivemos um arquivo CSV com os resultados obtidos para cada iteração e valor de "k". Gerando, de maneira gráfica, os seguintes resultados:
+
+
+### Análise por K:
+![Análise por K](assets/analise_porK.png)
+
+Acima, podemos observar um gráfico composto por um subplot 2x3,e, dentro de cada boxplot, podemos observar a distribuição dos erros para cada valor de K, de maneira individual.
+
+Falando um mais do boxplot em si, nesse podemos observar a mediana (linha no centro da caixa), os quartis (limites do retângulo), valores mínimos e máximos alcançados (linhas que se estendem para fora da caixa) e possíveis valores discrepantes (pontos além das extremidades). 
+
+Em outras palavras, podemos observar, nesse caso, a variação do erro em relação a cada valor de K e identificar possíveis tendências ou relações.
+### Histograma dos Erros:
+![Histograma dos Erros](assets/histograma.png)
+
+Para esse gráfico, podemos observar a distribuição dos erros de maneira geral, ou seja, para todos os valores de K.
+
+Podemos observar que no geral, os erros estão concentrados em torno do valor 0, o que indica que a diferença entre o valor original e o valor obtido após a decomposição é pequena. 
+
+### Erro Médio:
+![Erro Médio](assets/erro_medio.png)
+
+Nesse caso, o eixo X está representando os diferentes valores de K, enquanto que o eixo Y o erro médio correspondente.
+
+Legenda:
+- A linha azul representa o erro médio para cada valor de K.
+- A linha laranja representa a média geral do erro.
+- A linha verde representa a média do erro somado com o desvio padrão.
+- A linha vermelha representa a média do erro subtraído com o desvio padrão.
+
+No geral, essa visualização nos permite observar a relação entre o valor de K e o erro médio do modelo, bem como a variabilidade desse. Além de que com ele, podemos identificar a faixa de valores de K que produzem menor erro médio e avaliar a estabilidade dos resultados com base no desvio padrão.
+
+Obs.: Com as linhas verde e vermelha, podemos ter uma ideia da dispersão dos dados de erro em torno da média. Em outras palavras, eles nos ajudam a entender a variabilidade do desempenho do modelo para diferentes valores de K e identificar se há uma tendência consistente de melhoria ou piora à medida que esse aumenta ou diminui.
+
